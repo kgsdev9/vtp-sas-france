@@ -24,15 +24,13 @@ class AdminController extends Controller
 
     public function index() {
         $seller =  Seller::all();
-        $transporteur =  Carrier::all();
         $order = Order::all();
-
-        return view('admin.index', compact('seller',  'transporteur', 'order', ));
+        return view('admin.index', compact('seller',  'order'));
 
     }
 
 
-   
+
 
 
 

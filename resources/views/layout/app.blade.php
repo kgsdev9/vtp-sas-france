@@ -26,7 +26,7 @@
         };
     </script>
 
- 
+
 
 
 @livewireStyles
@@ -169,143 +169,17 @@
 <footer class="main-footer">
     <div class="footer-content">
         <div class="container">
-            <div class="row">
-
-                <div class=" col-xl-2 col-xl-2 col-md-2 col-6  ">
-                    <div class="footer-col">
-                        <h4 class="footer-title">A propos </h4>
-                        <ul class="list-unstyled footer-nav">
-                            <li><a href="#">À propos de la société</a></li>
-                            <li><a href="#">Pour le business</a></li>
-                            <li><a href="#">Nos partenaires</a></li>
-                            <li><a href="#">contact presse</a></li>
-                            <li><a href="#">Carrières</a></li>
-                            <li><a href="event-home.html">Événements</a></li>
-                        </ul>
-                    </div>
+            <div>
+                <div class=" text-center paymanet-method-logo">
+                    <img alt="img" src="{{ asset('assets/mobilemoey.png') }}">
+                    <img alt="img" src="{{ asset('assets/images/site/payment/visa_card.png') }}">
+                    <img alt="img" src="{{ asset('assets/images/site/payment/paypal.png') }}">
+                    <img alt="img" src="{{ asset('assets/images/site/payment/master_card.png') }}">
                 </div>
-
-                <div class=" col-xl-2 col-xl-2 col-md-2 col-6  ">
-                    <div class="footer-col">
-                        <h4 class="footer-title">AIDE & CONTACT</h4>
-                        <ul class="list-unstyled footer-nav">
-                            <li><a href="#">
-                                Restez en sécurité en ligne
-                            </a></li>
-                            <li><a href="#">
-                                Comment vendre</a></li>
-                            <li><a href="#">
-                                Comment acheter
-                            </a></li>
-                            <li><a href="#">Règles de publication
-                            </a></li>
-
-                            <li><a href="#">
-                                Promouvoir votre annonce
-                            </a></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <div class=" col-xl-2 col-xl-2 col-md-2 col-6  ">
-                    <div class="footer-col">
-                        <h4 class="footer-title">Liens utiles</h4>
-                        <ul class="list-unstyled footer-nav">
-                            <li><a href="faq.html">FAQ
-                            </a></li>
-                            <li><a href="blogs.html">Acutalités
-                            </a></li>
-                            <li><a href="#">
-                               Produit Populaire
-                            </a></li>
-                            <li><a href="#"> Plan du site
-                            </a></li>
-                            <li><a href="#"> Avis des clients
-                        </a></li>
-
-
-                        </ul>
-                    </div>
-                </div>
-                <div class=" col-xl-2 col-xl-2 col-md-2 col-6  ">
-                    <div class="footer-col">
-                        <h4 class="footer-title">Compte</h4>
-                        <ul class="list-unstyled footer-nav">
-
-                            @guest
-                            <li><a href="{{ route('login') }}">Mon Compte
-                            </a></li>
-                            @else
-
-                            <li><a href="{{ route('login') }}">Connexion
-                            </a></li>
-                            <li><a href="{{ route('register') }}">Inscription
-                            </a></li>
-                            <li><a href="{{ route('product_list') }}"> Mes Annonces
-                            </a></li>
-                            <li><a href="{{ route('dashboard') }}"> Profile
-                            </a></li>
-                            @endguest
-
-                        </ul>
-                    </div>
-                </div>
-                <div class=" col-xl-4 col-xl-4 col-md-4 col-12">
-                    <div class="footer-col row">
-
-                        <div class="col-sm-12 col-xs-6 col-xxs-12 no-padding-lg">
-                            <div class="mobile-app-content">
-                                <h4 class="footer-title">Mobile (Bientot Disponible)</h4>
-                                <div class="row ">
-                                    <div class="col-6  ">
-                                        <a class="app-icon" target="_blank"  href="#">
-                                            <span class="hide-visually">iOS app</span>
-                                            <img src="{{ asset('assets/images/site/app_store_badge.svg') }}" alt="Available on the App Store">
-                                        </a>
-                                    </div>
-                                    <div class="col-6  ">
-                                        <a class="app-icon"  target="_blank" href="#">
-                                            <span class="hide-visually">Android App</span>
-                                            <img src="{{ asset('assets/images/site/google-play-badge.svg') }}" alt="Available on the App Store">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-xs-6 col-xxs-12 no-padding-lg">
-                            <div class="hero-subscribe">
-                                <h4 class="footer-title no-margin">Suivez-nous !</h4>
-                                <ul class="list-unstyled list-inline footer-nav social-list-footer social-list-color footer-nav-inline">
-                                    <li><a class="icon-color fb" title="Facebook" data-placement="top" data-toggle="tooltip" href="#"><i class="fab fa-facebook-f"></i> </a></li>
-                                    <li><a class="icon-color tw" title="Twitter" data-placement="top" data-toggle="tooltip" href="#"><i class="fab fa-twitter"></i> </a></li>
-                                    <li><a class="icon-color gp" title="Google+" data-placement="top" data-toggle="tooltip" href="#"><i class="fab fa-google-plus-g"></i> </a></li>
-                                    <li><a class="icon-color lin" title="Linkedin" data-placement="top" data-toggle="tooltip" href="#"><i class="fab fa-linkedin"></i> </a></li>
-                                    <li><a class="icon-color pin" title="Linkedin" data-placement="top" data-toggle="tooltip" href="#"><i class="fab fa-pinterest-p"></i> </a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div style="clear: both"></div>
-
-                <div class="col-xl-12">
-                    <div class=" text-center paymanet-method-logo">
-                        <img alt="img" src="{{ asset('assets/mobilemoey.png') }}">
-                        <img alt="img" src="{{ asset('assets/images/site/payment/visa_card.png') }}">
-                        <img alt="img" src="{{ asset('assets/images/site/payment/paypal.png') }}">
-                        <img alt="img" src="{{ asset('assets/images/site/payment/master_card.png') }}">
-
-                    </div>
-
                     <div class="copy-info text-center">
                         &copy; 2012-2023 VTP. Tous les droits sont réservés.
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -345,5 +219,6 @@
 
 </script>
 @livewireScripts
+@include('flashy::message')
 </body>
 </html>

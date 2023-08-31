@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('statut')->default('disponible');
             $table->string('city')->default('inconnu');
             $table->string('country');
-            $table->float('price');
+            $table->integer('price');
             $table->text('description');
             $table->string('cover_image');
             $table->string('img_two');
@@ -28,9 +28,8 @@ class CreateProductsTable extends Migration
             $table->string('img_for');
             $table->tinyInteger('popular')->nullable();
             $table->tinyInteger('tendance')->nullable();
-
             $table->integer('quantity');
-            $table->float('high_price')->nullable();
+            $table->integer('high_price')->nullable();
             $table->timestamps();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('seller_id');

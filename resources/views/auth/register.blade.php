@@ -18,30 +18,27 @@
                         <div class="col-sm-12">
                             <form class="form-horizontal"  action="{{route('register')}}" method="POST">
                                 @csrf
+
+
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+
                                 <fieldset>
-
                                     <!-- Text input-->
-                                    <div class="form-group  row required">
-                                        <label class="col-md-4 control-label">Votre role @error('role')
-                                            <small class="text-danger">{{$message}}</small>
 
-                                        @enderror  <sup>*</sup></label>
 
-                                        <div class="col-md-6">
-                                          <select name="role" id="" class="form-control">
-                                            <option value="">Choisisez votre role </option>
-                                            @foreach ($roles as $ressource)
-                                            <option value="{{$ressource->id}}">{{$ressource->name}}</option>
-                                            @endforeach
-                                          </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
                                     <div class="form-group  row required">
                                         <label class="col-md-4 control-label">Nom D'utilisateur @error('name')
                                             <small class="text-danger">{{ $message }}</small>
-                                            
+
                                         @enderror <sup>*</sup></label>
 
                                         <div class="col-md-6">
@@ -49,13 +46,53 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group  row required">
+                                        <label class="col-md-4 control-label">Nom Complet  @error('fullname')
+                                            <small class="text-danger">{{ $message }}</small>
+
+                                        @enderror <sup>*</sup></label>
+
+                                        <div class="col-md-6">
+                                            <input name="fullname" placeholder="Bernard arnaud" class="form-control input-md" type="text" value="{{old('fullname')}}">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group  row required">
+                                        <label class="col-md-4 control-label">Télephone  @error('telephone')
+                                            <small class="text-danger">{{ $message }}</small>
+
+                                        @enderror <sup>*</sup></label>
+
+                                        <div class="col-md-6">
+                                            <input name="telephone" placeholder="+334567776" class="form-control input-md" type="text" value="{{old('telephone')}}">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group  row required">
+                                        <label class="col-md-4 control-label">Adresse  @error('adresse')
+                                            <small class="text-danger">{{ $message }}</small>
+
+                                        @enderror <sup>*</sup></label>
+
+                                        <div class="col-md-6">
+                                          <textarea name="adresse" id="" cols="30" rows="10" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
 
 
 
                                     <div class="form-group  row required">
                                         <label for="inputEmail3" class="col-md-4 control-label">Email  @error('email')
                                             <small class="text-danger">{{ $message }}</small>
-                                            
+
                                         @enderror
                                             <sup>*</sup></label>
 
@@ -66,7 +103,7 @@
                                     <div class="form-group  row required">
                                         <label for="inputPassword3" class="col-md-4 control-label">Password  @error('password')
                                             <small class="text-danger">{{ $message }}</small>
-                                            
+
                                         @enderror  </label>
 
                                         <div class="col-md-6">
@@ -126,24 +163,21 @@
                 <div class="reg-sidebar-inner text-center">
                     <div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
 
-                        <h3><strong>Publier une petite annonce gratuite</strong></h3>
+                        <h3><strong>Publiez vos annonces gratuitement</strong></h3>
 
-                        <p> Post your free online classified ads with us. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. </p>
+                        <p>déposez vos annonces rapidement et faciliement</p>
                     </div>
                     <div class="promo-text-box"><i class=" icon-pencil-circled fa fa-4x icon-color-2"></i>
 
-                        <h3><strong>Créer et gérer vos annonces</strong></h3>
+                        <h3><strong>Gerez vos annonces facilement</strong></h3>
 
-                        <p> Nam sit amet dui vel orci venenatis ullamcorper eget in lacus.
-                            Praesent tristique elit pharetra magna efficitur laoreet.</p>
+                        <p>Nous vous propopons un espace marchant suivre l'evolution de vos produits.</p>
                     </div>
                     <div class="promo-text-box"><i class="  icon-heart-2 fa fa-4x icon-color-3"></i>
 
-                        <h3><strong>Créez votre liste d'annonces favorites.</strong></h3>
+                        <h3><strong>Ajoutez vos annonces favorites à votre espace personnalisée.</strong></h3>
 
-                        <p> PostNullam quis orci ut ipsum mollis malesuada varius eget metus.
-                            Nulla aliquet dui sed quam iaculis, ut finibus massa tincidunt.</p>
+                        <p>Gérez vos liste d'envie et revenez plus tard pour effectuer les commandes de vos produits.</p>
                     </div>
                 </div>
             </div>

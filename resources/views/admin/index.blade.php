@@ -41,17 +41,8 @@
 
                     </div>
                 </div>
-               
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card number-chart">
-                        <div class="body">
-                            <span class="text-uppercase">Total Transporteurs</span>
-                            <h4 class="mb-0 mt-2">{{count($transporteur)}}</h4>
 
-                        </div>
-
-                    </div>
-                </div>
+           
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="card number-chart">
                         <div class="body">
@@ -65,7 +56,7 @@
 
 
 
-              
+
 
             </div>
 

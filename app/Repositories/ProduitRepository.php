@@ -3,7 +3,7 @@ namespace App\Repositories ;
 
 use App\Models\Product;
 use Illuminate\Support\Str;
-use Illuminate\Http\Client\Request;
+use MercurySeries\Flashy\Flashy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\ProductRequest;
@@ -60,6 +60,7 @@ public function saveOrCreate(ProductRequest $request) {
     $product->statut = $request->input('statut');
     $product->description = $request->input('description');
     $product->price = $request->input('price');
+    $product->high_price = $request->input('price')* 654;
     $product->quantity = $request->input('quantity');
     $product->category_id = $request->input('category_id');
     $product->seller_id = Auth::user()->owner_id ;
@@ -97,6 +98,7 @@ public function saveOrCreate(ProductRequest $request) {
                        $product->img_for = $filenamefor;
     }
 
+  Flashy::message('Annonce ajouté avec succes!');
    return  $product->save();
 
 }
@@ -165,8 +167,10 @@ public function update(UpdateRequestProduct $request, $id) {
            $file->move(public_path('images/'),$name);
             $product->img_for = $name;
          }
+
+         Flashy::message('Annonce modifiée avec succes!');
         return  $product->update();
-    
+
  }
 
 

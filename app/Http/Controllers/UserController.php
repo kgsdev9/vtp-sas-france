@@ -59,6 +59,7 @@ class UserController extends Controller
 
 
 
+
      public function updateprofile(){
         return view('dashboard.profile.useraccount.updateprofile');
       }
@@ -91,6 +92,9 @@ class UserController extends Controller
 
 
         }
+
+
+
 
 
         public function indexAjax(){

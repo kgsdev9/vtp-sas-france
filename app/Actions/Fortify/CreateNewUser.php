@@ -24,8 +24,12 @@ class CreateNewUser implements CreatesNewUsers
     {
 
         Validator::make($input, [
-            'role'=>['required'],
+            'adresse'=>['required'],
+            'telephone'=>['required'],
+            'fullname'=>['required'],
             'name' => ['required', 'string', 'max:255'],
+            'telephone' => ['required'],
+            'adresse' => ['required'],
             'email' => [
                 'required',
                 'string',
@@ -40,14 +44,14 @@ class CreateNewUser implements CreatesNewUsers
         $rand= rand(0,1000);
         $code=$rand;
 
-
-
-
         $user = User::create([
+            'adresse' => $input['adresse'],
+            'telephone' => $input['telephone'],
+            'fullname' => $input['fullname'],
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'role_id'=>$input['role'],
+            'role_id'=> 1,
             'code'=>$code
         ]);
 

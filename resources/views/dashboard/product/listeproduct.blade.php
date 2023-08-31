@@ -15,11 +15,11 @@
                     <h2 class="title-2"><i class="icon-docs"></i>Mes Annonces </h2>
 
                     <div class="table-responsive">
-                      
+
                         <table id="addManageTable" class="table table-striped table-bordered add-manage-table table demo footable-loaded footable" data-filter="#filter" data-filter-text-only="true">
                             <thead>
                             <tr>
-                                
+
                                 <th> Photo</th>
                                 <th data-sort-ignore="true">Detail de l'annonce</th>
                                 <th data-type="numeric"> Price</th>
@@ -27,20 +27,20 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ( $product_product as  $product_products )   
+                            @foreach ( $product_product as  $product_products )
                             <tr>
-                               
-                                <td style="width:14%" class="add-img-td"><a href="ads-details.html">
+
+                                <td style="width:14%" class="add-img-td"><a href="#">
                                     <img class="thumbnail  img-responsive" src="{{asset('cover/'.$product_products->cover_image)}}" alt="img"></a></td>
                                 <td style="width:58%" class="ads-details-td">
                                     <div>
-                                        <p><strong> <a href="ads-details.html"> {{$product_products->name}}
+                                        <p><strong> <a href="#"> {{$product_products->name}}
                                           </a> </strong></p>
 
                                         <p><strong> Posté le   </strong>:
                                             {{$product_products->created_at}} </p>
 
-                                        <p><strong>Provenance  </strong>: {{$product_products->country}} <strong> {{$product_products->city}} </strong> 
+                                        <p><strong>Provenance  </strong>: {{$product_products->country}} <strong> {{$product_products->city}} </strong>
                                         </p>
                                     </div>
                                 </td>

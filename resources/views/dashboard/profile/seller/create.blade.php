@@ -8,11 +8,11 @@
         <form class="js-validate" novalidate="novalidate" method="POST" action="  {{ route('seller.store') }} " enctype="multipart/form-data">
             @csrf
 
-            <h3>Renseignez correctement vos informations </h3>
+            <h3>Renseignez les informations </h3>
             <div class="row">
                     <!-- Form Group -->
                     <div class="js-form-message form-group col-md-6">
-                        <label class="form-label" for="signinSrnomExample3">Entrer Votre Nom et prenom @error('fullname')
+                        <label class="form-label" for="signinSrnomExample3">Entrer votre nom et prénom @error('fullname')
 
                     <small style="color:red">{{ $message}}</small>
                                     @enderror</label>
@@ -24,7 +24,7 @@
 
                                             <!-- Form Group -->
                                             <div class="js-form-message form-group col-md-6">
-                                                <label class="form-label" for="signinSrnomExample3">Numero WhatsApp @error('firstname')
+                                                <label class="form-label" for="signinSrnomExample3">Numero whatsapp @error('firstname')
 
                     <small style="color:red">{{ $message}}</small>
                     @enderror</label>
@@ -48,12 +48,12 @@
                                                                 >
                         </div>
                         <!-- End Form Group -->
-                </div>      
+                </div>
 
                 <div class="col-md-6">
                     <!-- Form Group -->
                     <div class="js-form-message form-group">
-                        <label class="form-label" for="signinSrPasswordExample2">Votre logo  (Recommandé si vous etes une entreprise)  @error('mobilemoney')
+                        <label class="form-label" for="signinSrPasswordExample2">Votre logo (Recommandé si vous êtes une entreprise)  @error('mobilemoney')
 
                             <small style="color:red">{{ $message}}</small>
                             @enderror</label></label>
@@ -61,12 +61,12 @@
                                                             >
                     </div>
                     <!-- End Form Group -->
-            </div>      
-
-
-              
             </div>
-       
+
+
+
+            </div>
+
             <div class="row">
                 <!-- Form Group -->
                 <div class="js-form-message form-group col-md-6">
@@ -102,7 +102,7 @@
 
                 <small style="color:red">{{ $message}}</small>
                                 @enderror</label>
-                                                                      
+
                                     </label>
                                     <input type="file" class="form-control" name="rib"  placeholder="rib"   >
                                 </div>
@@ -110,7 +110,7 @@
 
                                         <!-- Form Group -->
                                         <div class="js-form-message form-group col-md-6">
-                                            <label class="form-label" for="signinSrnomExample3">ADRESSE @error('house_piece')
+                                            <label class="form-label" for="signinSrnomExample3">Adresse @error('house_piece')
 
                             <small style="color:red">{{ $message}}</small>
                             @enderror</label>

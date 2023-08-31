@@ -21,7 +21,6 @@ class CreateOrder extends Component
     {
         return view('livewire.create-order', [
             'ressource' => Product::where('slug', $this->slug)->first(),
-            'transporteur' => Offre::all()
         ])->extends('layout.app')->section('content');
     }
 }

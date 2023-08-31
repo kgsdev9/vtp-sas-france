@@ -58,9 +58,6 @@
                                     <a href="#">Acteurs</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item active"><a href="{{url('/dashboard/admin/seller/liste')}}">Liste Des Vendeurs</a></li>
-                                        <li class="menu-item"><a href="{{route('buyer.all')}}">Liste Des Acheteurs</a></li>
-                                        <li class="menu-item"><a href="{{url('/dashboard/admin/carrier/liste')}}">Liste Des Transporteurs</a></li>
-
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children">
@@ -87,38 +84,10 @@
                                     </ul>
                                 </li>
 
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="#"> Annonces</a>
-                                    <ul class="sub-menu">
-                                        <li >
-                                            <li class="menu-item"><a href="{{route('admin.announce')}}">Toutes Les Annonces</a></li>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('senbox.announce')}}">Messages liés aux announces </a>
-                                        </li>
 
 
-                                    </ul>
-                                </li>
 
 
-                                <li class="">
-                                    <a href="{{route('transport.offre')}}">Offre de transport</a>
-                                </li>
-
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="#">Pays & Ville</a>
-                                    <ul class="sub-menu">
-                                        <li >
-                                            <li class="menu-item"><a href="{{route('country.index')}}">Gestion de pays</a></li>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('city.index')}}">Gestion de ville</a>
-                                        </li>
-
-
-                                    </ul>
-                                </li>
 
                                 <li class="menu-item menu-item-has-children">
                                     <a href="#">Gestion de compte </a>
@@ -134,20 +103,6 @@
                                     </ul>
                                 </li>
 
-
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="#">Gestion de formation  </a>
-                                    <ul class="sub-menu">
-                                        <li class="">
-                                            <a href="">Ajouter une fomation </a>
-                                        </li>
-                                        <li class="contact menu-item ">
-                                            <a href="">Liste des formations</a>
-                                        </li>
-
-
-                                    </ul>
-                                </li>
 
 
 

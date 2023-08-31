@@ -2,11 +2,7 @@
 
 
 
-use App\Http\Livewire\SaveOrder;
-
-
 use App\Http\Livewire\CreateOrder;
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
@@ -22,12 +18,10 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProductController;
-use App\Http\Livewire\Cardproductcomponent;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\Home\HomeController;
 
-use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\UserProductController;
 use App\Http\Controllers\Payment\PaymentController;
 use App\Http\Controllers\Vendeur\Produit\GestionProduitController;
@@ -121,15 +115,6 @@ Route::get('/pages/category/products/{id}',[UserController::class,'showcateProdu
 Route::get('/index/product',  [UserController::class, 'total_product']) ;
 Route::get('/remove/{id}' , [WishlistController::class, 'destroy'])->name('destroy.items');
 Route::get('/orders', [OrderController::class, 'index'])->name('order.index')->middleware('auth');
-Route::get('/detail/oders/{id}', [OrderController::class, 'detail_order'])->name('detail.order');
-Route::get('/orders/liste', [OrderController::class, 'show'])->name('user.detail')->middleware('auth');
-Route::post('/sms/send', [MessageController::class, 'store'])->name('send.sms');
-Route::get('dashboard/profil/offre/forms', [OffreController::class, 'index']);
-Route::get('dashboard/profil/offre/list', [OffreController::class,'liste_offre'])->name('liste.offert');
-Route::get('dashboard/profil/offre/edit/{id}', [OffreController::class,'edit_offrert'])->name('edit.offert');
-Route::post('dashboard/profil/offre/forms', [OffreController::class, 'store'])->name('offre.store');
-Route::get('dashboard/profil/offre/delete/{id}', [OffreController::class,'delete'])->name('delete.offert');
-Route::patch('/dashboard/profile/offre/update/{id}',[OffreController::class,'update_offre'])->name('update.offre');
 
 Route::get('/dashboard',[UserController::class,'dashboard'])->name('dashboard')->middleware('confirmation_verified');
 

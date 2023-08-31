@@ -109,13 +109,13 @@
 
 
             <div style="clear: both"></div>
+            @if($productCollectionRandom->count() > 0)
             <div class="col-xl-12 content-box ">
                 <div class="row row-featured">
                     <div class="col-xl-12  box-title ">
                         <div class="inner"><h2><span>Annonces VIP  </span>
                             <a href="#" class="sell-your-item"> Consulter <i
                                     class="  icon-th-list"></i> </a></h2>
-
                         </div>
                     </div>
 
@@ -152,13 +152,15 @@
 
                 </div>
             </div>
+            @else
+
+            @endif
 
 
 
 
 
 
-          
 
 
 
@@ -241,61 +243,6 @@
 
             </div>
 
-
-
-
-
-            <div class="section-content">
-                {{-- <div class="row ">
-                    <h2 class="text-center title-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bienvenue dans les Termes et Conditions des Petites Annonces</font></font></h2>
-                    <hr class="center-block small text-hr">
-                </div> --}}
-                <br>
-
-                <div class="container-content">
-
-                    <div class="inner-box ">
-
-
-                        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Veuillez lire très attentivement les termes et conditions suivants car votre utilisation du service est soumise à votre acceptation et à votre respect des termes et conditions suivants ("Conditions").</font></font></strong></p>
-
-
-                        <div class="w100 clearfix">
-                            <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Introduction</font></font></h3>
-                                <p>Nous avons tous un besoin irrationnel de partager quelques choses avec des nos amis, famille, ou avec de parfait inconnu et souvent si on peut entirer un bénéfice c'est toujours valorisant.C'est pour VTP-MARKET à vu le jour pour vous permettre d'échanger des biens et des compétences dans le monde entier avec une communauté grandissante désireuse de nouveautés en thème d'articles en tout genre et de connaissance métier en perpétuel évolution.
-
-
-                                 </p>
-
-                                 <p> Nous avons réussi à mettre en place une plate-forme qui met en valeur vos compétences métier afin d'aider le plus grand à comprendre ce que vous maîtrisez déjà et le plus fun le cool dans tous cela, c'est vous qui fixer la durée de la formation, le prix, et la plate-forme à utiliser pour dispenser vos connaissances.Après de longue années à observer les écoles et centre de formation, VTP-MARKET, à compris que les institutions est un bon moyen pour enrichir nos connaissances, mais l'expérience c'est ce qui permet d'atteindre ces objectifs.Venez participer à ce projet avec nous, car VTP-MARKET, ne refuse pas les seniors qui ont tant à apporter dans un monde toujours en quête de réponse.Nous ne sommes pas en reste en ce qui concerne nos livraisons de marchandises dans plusieurs pays d'Afrique et vice versa, nos tarifs sont très avantageux et nous réservons de nombreux petit bonus pour vous faciliter la vie. Créez votre espace sur VTP-MARKET en quelques et rapprochez vous encore un peu plus de vis objectifs professionnels. Nous restons à votre disposition par mail sur vtp.sas.france@gmail.com
-
-                                    Nous avons tous un besoin irrationnel de partager quelques choses avec des nos amis, famille, ou avec de parfait inconnu et souvent si on peut entirer un bénéfice c'est toujours valorisant.</p>
-                            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">  C'est pour VTP-MARKET à vu le jour pour vous permettre d'échanger des biens et des compétences dans le monde entier avec une communauté grandissante désireuse de nouveautés en thème d'articles en tout genre et de connaissance métier en perpétuel évolution.</p>
-
-                                <p> Nous avons réussi à mettre en place une plate-forme qui met en valeur vos compétences métier afin d'aider le plus grand à comprendre ce que vous maîtrisez déjà et le plus fun le cool dans tous cela, c'est vous qui fixer la durée de la formation, le prix, et la plate-forme à utiliser pour dispenser vos connaissances.
-
-                                    Après de longue années à observer les écoles et centre de formation, VTP-MARKET, à compris que les institutions est un bon moyen pour enrichir nos connaissances, mais l'expérience c'est ce qui permet d'atteindre ces objectifs.
-                                </p>
-                                <br>
-                                <p>
-                                    Venez participer à ce projet avec nous, car VTP-MARKET, ne refuse pas les seniors qui ont tant à apporter dans un monde toujours en quête de réponse.
-
-                                    Nous ne sommes pas en reste en ce qui concerne nos livraisons de marchandises dans plusieurs pays d'Afrique et vice versa, nos tarifs sont très avantageux et nous réservons de nombreux petit bonus pour vous faciliter la vie.
-
-                                    Créez votre espace sur VTP-MARKET en quelques et rapprochez vous encore un peu plus de vis objectifs professionnels.
-
-                                    Nous restons à votre disposition par mail sur vtp.sas.france@gmail.com</p>
-
-
-                            <hr>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
 
         </div>
     </div>

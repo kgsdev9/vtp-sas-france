@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-9 page-content">
                 <div class="inner-box category-content">
-                    <h2 class="title-2 uppercase"><strong> <i class="icon-docs"></i> Créer votre annonce 
+                    <h2 class="title-2 uppercase"><strong> <i class="icon-docs"></i> Créer votre annonce
                        </strong></h2>
 
                     <div class="row">
@@ -18,6 +18,16 @@
 
                             <form class="form-horizontal form-post-ads" method="POST" action="{{route('create.product')}}"   enctype="multipart/form-data">
                              @csrf
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-form-label">Category</label>
                                     <div class="col-sm-8">
@@ -25,7 +35,7 @@
                                            @foreach ($cate as $value)
                                            <option value="{{$value->id}}">{{ $value->name }}</option>
                                            @endforeach
-                                          
+
                                         </select>
                                     </div>
                                 </div>
@@ -85,7 +95,7 @@
                                     </div>
 
 
-                                    
+
                                 </div>
 
                                 <div class="form-group row">
@@ -102,26 +112,26 @@
                                         <div class="mb10">
                                  <span class="file-input file-input-new">
                                     <input type="file" name="first_image" class="form-control" required>
-                                    
+
                                 </span>
 
                                 <span class="file-input file-input-new">
                                     <input type="file" name="two_image"    class="form-control" placeholder="" required>
-                                    
+
                                 </span>
 
                                 <span class="file-input file-input-new">
                                     <input type="file" name="three_image"    class="form-control" placeholder="" required>
-                                    
+
                                 </span>
 
                                 <span class="file-input file-input-new">
                                     <input type="file" name="for_image"    class="form-control" placeholder="" required>
-                                    
+
                                 </span>
                                         </div>
-                                                                         
-                                      
+
+
                                         <p class="form-text text-muted">
                                             Ajoutez jusqu'à 4 photos. Utilisez une image réelle de votre produit, pas des catalogues
                                         </p>
@@ -133,8 +143,8 @@
                                     <div class="col-sm-8">
 
                                         <button type="submit" class="btn btn-success btn-lg">Enregistret et publier l'annonce</button>
-                                      
-                                    
+
+
                                     </div>
                                 </div>
 
@@ -151,24 +161,22 @@
                 <div class="reg-sidebar-inner text-center">
                     <div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
 
-                        <h3><strong>Post a Free Classified</strong></h3>
+                        <h3><strong>Poster votre annonce </strong></h3>
 
-                        <p> Post your free online classified ads with us. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. </p>
+                        <p> Publier vos annonces et commencez à génerer vos premiers revenus </p>
                     </div>
 
                     <div class="card sidebar-card">
                         <div class="card-header uppercase">
-                            <small><strong>How to sell quickly?</strong></small>
+                            <small><strong>Nos conseils ! </strong></small>
                         </div>
                         <div class="card-content">
                             <div class="card-body text-left">
                                 <ul class="list-check">
-                                    <li> Use a brief title and description of the item</li>
-                                    <li> Make sure you post in the correct category</li>
-                                    <li> Add nice photos to your ad</li>
-                                    <li> Put a reasonable price</li>
-                                    <li> Check the item before publish</li>
+                                    <li> Utilisez un titre bref et une description de l'article</li>
+                                    <li> Assurez-vous de poster dans la bonne catégorie</li>
+                                    <li> ajoutez de belles photos à votre annonce</li>
+                                    <li>Payez uniquement sur VTP(nous vous rembourseront en ca de litige)</li>
 
                                 </ul>
                             </div>

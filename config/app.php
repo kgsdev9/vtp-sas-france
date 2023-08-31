@@ -187,12 +187,12 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 
 
-
         /*
          * Package Service Providers...
          */
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
+        MercurySeries\Flashy\FlashyServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -221,7 +221,8 @@ return [
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'Share' => Jorenvh\Share\ShareFacade::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Flashy' => MercurySeries\Flashy\Flashy::class,
 
     ])->toArray(),
 
