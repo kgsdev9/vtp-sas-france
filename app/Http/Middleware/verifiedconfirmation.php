@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use MercurySeries\Flashy\Flashy;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -21,7 +22,7 @@ class verifiedconfirmation
 
         if(Auth::user()->confirmated_account==false){
             Auth::logout();
-            Alert::toast("Désolez un lien a été envoyé  à votre addresse Email , confirmez votre compte !","warning");
+            Flashy::message('Confirmer votre compte pour continuer');
             return redirect()->route('home');
         }else{
             return $next($request);

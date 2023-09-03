@@ -12,14 +12,14 @@ class Order extends Model
     protected $fillable = [
         'fullname',
         'adresse_delivry',
-        'country_delivry',
-        'city_delivry',
+        'price',
+        'email',
         'phone',
         'user_id',
-        'seller_id',
+        'status',
         'amount',
-        'codeCommande',
-        ''
+        'code   ',
+        'product_id'
     ];
 
     public function user() {

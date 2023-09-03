@@ -146,7 +146,7 @@
                                 <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> <i class="fa fa-whatsapp"></i>Contacter Via WhatsApp
                                 <a class="btn  btn-info btn-block"  href="tel:{{$ressource->seller->phonenumber}}">
                                     <i class=" icon-phone-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appeler</font></font></a>
-                                    <a class="btn  btn-primary btn-block"  href="{{route('order.create', $ressource->slug)}}">
+                                    <a class="btn  btn-primary btn-block"  href="{{route('processing.payment', $ressource->slug)}}">
                                         <i class="far fa-credit-card"></i> <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acheter l'article </font></font></a>
                             </div>
 

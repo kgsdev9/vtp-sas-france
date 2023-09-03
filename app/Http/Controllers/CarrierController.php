@@ -133,7 +133,6 @@ class CarrierController extends Controller
 
 
 
-
        $msg= " Modifier avec succès ";
        Alert::toast($msg,'success');
        return  redirect()->back();

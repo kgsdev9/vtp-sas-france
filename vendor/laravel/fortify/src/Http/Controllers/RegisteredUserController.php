@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
+use MercurySeries\Flashy\Flashy;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Contracts\RegisterViewResponse;
 
@@ -54,7 +55,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user = $creator->create($request->all())));
 
         $this->guard->login($user);
-
+        Flashy::message('Inscription réussie, consulter votre compte pour confirmer votre email!');
         return app(RegisterResponse::class);
     }
 }

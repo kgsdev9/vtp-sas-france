@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
 use Stevebauman\Location\Facades\Location;
+use MercurySeries\Flashy\Flashy;
 
 class SellerController extends Controller
 {
@@ -94,10 +95,7 @@ class SellerController extends Controller
 
         // User::where('id',Auth::user()->id)->update(['owner_id'=>$seller->id]);
 
-        $msg = " Félicitation votre  Inscription en tant que vendeur est terminée ";
-
-        Alert::success('Inscription vendeur', $msg);
-
+        Flashy::message('Inscription annonceur terminé commencer à publier sur VTP!');
         return  redirect()->route('dashboard');
     }
 
@@ -105,7 +103,7 @@ class SellerController extends Controller
     {
         Validator::make($request->input(), [
             'sirname' => ['string', 'max:255'],
-            'firstname' => ['string', 'max:255'],
+            'firstname' => ['string', 'max:2we55'],
             'phonenumber' => ['string', 'max:255'],
             'frequence' => ['string', 'max:255'],
             'media' => ['string', 'max:255'],

@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
+use MercurySeries\Flashy\Flashy;
 
 class UserController extends Controller
 {
@@ -129,7 +130,8 @@ class UserController extends Controller
                   'confirmated_account'=>true
                 ]);
                 Auth::loginUsingId($user->id);
-                Alert::toast("Félicitation vous avez terminer votre inscription", "success");
+                Flashy::message('Compte confirmé merci de faire partie de VTP');
+
                 return redirect()->route('home');
                }
 

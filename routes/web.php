@@ -224,4 +224,11 @@ Route::get('/create-order/{slug}', CreateOrder::class)->name('order.create');
 
 
 
-Route::get('/order-chose-component/{slug}-{id}', [HomeController::class, 'createOrder'])->name('order.save');
+// Route::get('/order-chose-component/{slug}-{id}', [HomeController::class, 'createOrder'])->name('order.save');
+
+
+Route::get('/proccessing-payement/{id}', [HomeController::class, 'createOrders'])->name('processing.payment');
+
+Route::get('/succes-paiement' , function() {
+    return view('success');
+})->name('succes');

@@ -17,11 +17,10 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->string('fullname');
             $table->text('adresse_delivry');
-            $table->string('country_delivry');
-            $table->string('city_delivry');
             $table->string('phone');
-            $table->string('quantity');
             $table->string('email');
+            $table->string('price');
+            $table->enum('status', ['en attente'])->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->nullable();
             $table->timestamps();
