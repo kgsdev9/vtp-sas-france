@@ -177,7 +177,15 @@
                     <img alt="img" src="{{ asset('assets/images/site/payment/master_card.png') }}">
                 </div>
                     <div class="copy-info text-center">
-                        &copy; 2012-2023 VTP. Tous les droits sont réservés.
+                        &copy; 2012-2023 VTP. Tous les droits sont réservés. <br>
+                        Afin de garantir une expérience d'achat réussie a nos propects, sur VTP-MARKET se sont les vendeurs qui supporte la charge des frais d'envoi de colis.
+
+                        - Afin de sécurisé chaque action de vente, le vendeur recevra sa solde uniquement quand le client sera en possession de colis.
+
+                        - Les produits mise en ligne sur la plate-forme VTP-MARKET est sous la responsabilité des vendeurs en cas de litige, se réserve le droit d'arbitré les gas exceptionnelle.
+
+                        - VTP-MARKET mettra à disposition les services de ces partenaires de transport international selon la zone géographique à livrer.
+                        Ex: France -Togo, côte d'Ivoire - Antilles, Afrique - Europe, etc....
                     </div>
                 </div>
             </div>
