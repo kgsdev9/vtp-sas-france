@@ -46,8 +46,8 @@
                                         <tr>
                                             <td><a href="{{ asset('cover/'.$seller_product->cover_image)}}"><img src="{{ asset('cover/'.$seller_product->cover_image)}}" width="48" alt="Product img"></a> </td>
                                              <td>{{ Str::limit($seller_product->name, 10)}}</td>
-                                            <td>{{$seller_product->country->name }}</td>
-                                            <td>{{ $seller_product->city->name }}</td>
+                                            <td>{{$seller_product->country }}</td>
+                                            <td>{{ $seller_product->city}}</td>
                                             <td>{{ $seller_product->price  }} €</td>
                                             <td>{{ $seller_product->quantity  }} </td>
                                             <td>

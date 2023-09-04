@@ -47,23 +47,20 @@
 
                                                         <th>Nom du produit </th>
                                                         <th> Information Vendeur  </th>
-                                                        <th>Contact Vendeur</th>
-                                                        <th>Quantite</th>
-                                                        <th class="hidden-sm-down">Prix</th>
+
+
 
                                                     </tr>
                                                 </thead>
                                                 <tbody>
 
-                                                    @foreach($order->products as $s)
+
                                                         <tr>
-                                                            <td>{{Str::limit($s->name, 30)}}</td>
-                                                                <td>{{$s->seller->sirname}}  {{$s->seller->firstname}}</td>
-                                                            <td class="hidden-sm-down">{{$s->seller->phonenumber}}</td>
-                                                            <td>{{$s->pivot->quantity}} </td>
-                                                            <td>{{$s->pivot->amount}} €</td>
+                                                            <td>{{$order->product->name}}</td>
+                                                                <td>{{$order->user->adresse}} </td>
+
                                                         </tr>
-                                                    @endforeach
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -74,11 +71,11 @@
                                     <div class="col-md-6">
 
                                         <p> Adresse de livraison: <strong> {{$order['adresse_delivry']}}.</strong><br>  </p>
-                                        <a  href="{{route('invoice.admin', $order->id)}}" class="btn btn-dark text-white" >IMPRIMER LE RECU</a>
+                                        {{-- <a  href="{{route('invoice.admin', $order->id)}}" class="btn btn-dark text-white" >IMPRIMER LE RECU</a> --}}
                                     </div>
                                     <div class="col-md-6 text-right">
 
-                                        <h3 class="mb-0 m-t-10">Total :  {{$order->amount}} €</h3>
+                                        <h3 class="mb-0 m-t-10">Total :     <td>{{$order->price}}</td>FCFA</h3>
                                     </div>
 
                                 </div>

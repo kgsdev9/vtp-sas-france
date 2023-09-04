@@ -148,7 +148,7 @@ Route::get('subscription', [SouscribrController::class, 'list'])->name("subscrip
 
 
 
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth', 'block'])->group(function() {
 Route::get('/dashboard/admin/profile/updateprofileform',[AdminController::class,'updateprofile'])->name('admin.update.form');
 Route::get('/dashboard/admin/profile/updatepasswordprofileform',[AdminController::class,'updatepasswordprofile'])->name('admin.update.password.form');
 Route::get('/dashboard/admin', [AdminController::class, 'index'])->name('admin_dashbord');

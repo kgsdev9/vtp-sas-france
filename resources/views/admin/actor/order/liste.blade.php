@@ -35,9 +35,9 @@
                             @foreach ( $order as $c)
                                 <tr>
                                     <td>{{$c->fullname}}</td>
-                                <td>{{$c->quantity}}  </td>
+                                <td>{{$c->adresse_delivry	}}  </td>
 
-                                <td> {{$c->amount}} €</td>
+                                <td> {{$c->price}} FCFA </td>
                                 <td>{{$c->phone}} </td>
                                 <td> {{$c->code}}</td>
                                 <td>

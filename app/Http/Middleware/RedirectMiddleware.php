@@ -21,8 +21,9 @@ class RedirectMiddleware
         if(Auth::user()->role->name=="admin") {
             return $next($request);
         } else {
+          
             Alert::toast('Accès Réfusé','warning');
-            return redirect()->back();
+            return redirect()->route('home');
         }
 
     }

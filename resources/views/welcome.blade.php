@@ -107,66 +107,6 @@
 
 
 
-
-            <div style="clear: both"></div>
-            @if($productCollectionRandom->count() > 0)
-            <div class="col-xl-12 content-box ">
-                <div class="row row-featured">
-                    <div class="col-xl-12  box-title ">
-                        <div class="inner"><h2><span>Annonces VIP  </span>
-                            <a href="#" class="sell-your-item"> Consulter <i
-                                    class="  icon-th-list"></i> </a></h2>
-                        </div>
-                    </div>
-
-                    <div style="clear: both"></div>
-
-                    <div class=" relative  content featured-list-row  w100">
-
-                        <nav class="slider-nav has-white-bg nav-narrow-svg">
-                            <a class="prev">
-                                <span class="nav-icon-wrap"></span>
-
-                            </a>
-                            <a class="next">
-                                <span class="nav-icon-wrap"></span>
-                            </a>
-                        </nav>
-
-                        <div class="no-margin featured-list-slider ">
-
-                            @foreach ($productCollectionRandom as $value)
-                            <div class="item">
-                                <a href="{{ route('detail.ads', $value->slug)}}">
-                                <span class="item-carousel-thumb">
-                            	<img class="img-responsive" src="{{ asset('cover/'.$value->cover_image) }}" alt="img">
-                                   </span>
-                                <span class="item-name">{{ Str::limit($value->name, 30)}}</span>
-                                <span class="price"> {{ $value->price }}€</span>
-                            </a>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            @else
-
-            @endif
-
-
-
-
-
-
-
-
-
-
-
-
             <div class="col-md-12 card card-default  login-box">
                 <div class="category-list make-grid">
                     <div class="listing-filter">
