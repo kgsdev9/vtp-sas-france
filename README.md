@@ -3,7 +3,7 @@
 ### 1. Comment cloner le  repository  Sur votre ordinateur
 
 ### 2. Install dependencies with composer
-```sh
+```stephane
 composer install
 ```
 
